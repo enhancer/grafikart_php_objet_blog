@@ -1,6 +1,6 @@
 <?php
 
-require '..\app\Autoloader.php';
+require '..\App\Autoloader.php';
 
 \App\Autoloader::register();
 
@@ -12,7 +12,9 @@ If (isset($_GET['p']))
      $p = 'home';
 }
 
+// Initialisation des objets
 
+$db = new App\Database('grafikart_blog');
 ob_start();
 
 
