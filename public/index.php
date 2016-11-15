@@ -4,6 +4,7 @@ require '..\App\Autoloader.php';
 
 \App\Autoloader::register();
 
+
 If (isset($_GET['p']))
 {
     $p = $_GET['p'];
@@ -20,9 +21,10 @@ ob_start();
 
 If ($p === 'home')
 {
+    echo "home";
     require '../pages/home.php';
 }
-elseif ($p === 'single')
+elseif ($p === 'article')
 {
     require '../pages/single.php';
 }

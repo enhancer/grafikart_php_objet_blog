@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -15,7 +15,7 @@
     
   </head>
 
-  <body>
+  <body style="padding-top: 100px">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -38,8 +38,8 @@
     </div>
 
       <div class="container" style="padding-top: 100px">
-
-      <?= $content; ?>
+      
+      <?php echo $content; // chez moi c'est <= pour l'ouverture de balise php ?>
 
     </div> <!-- /container -->
 
