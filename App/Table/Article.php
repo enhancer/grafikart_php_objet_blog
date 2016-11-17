@@ -1,5 +1,7 @@
 <?php
 namespace App\Table;
+
+use App\App;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,13 +13,11 @@ namespace App\Table;
  *
  * @author chris
  */
-class Article {
+class Article extends Table{
     
-    public function __get($key)
+    public function getLast()
     {
-        $method = 'get'.ucfirst($key);
-        $this->$key = $this->$method();
-        return $this->$key;
+        return App::getDb()->query('SELECT * FROM article , categorie WHERE id = categorie_id ', __CLASS__);
     }
 
         public function getUrl()
